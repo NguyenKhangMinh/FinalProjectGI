@@ -8,9 +8,13 @@
   <sprites name="sprites"/>
   <backgrounds name="background">
     <background>background\background</background>
+    <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <rooms name="rooms">
+    <room>rooms\room_main2</room>
     <room>rooms\room_main</room>
   </rooms>
   <help>
