@@ -5,7 +5,20 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="player">
+      <sprite>sprites\spr_idle</sprite>
+      <sprite>sprites\spr_attack</sprite>
+      <sprite>sprites\spr_jump</sprite>
+      <sprite>sprites\spr_run</sprite>
+      <sprites name="enermy">
+        <sprite>sprites\spr_enermy</sprite>
+        <sprite>sprites\spr_enermy_attack</sprite>
+        <sprite>sprites\spr_enermy_idle</sprite>
+        <sprite>sprites\spr_enermy_walk</sprite>
+      </sprites>
+    </sprites>
+  </sprites>
   <backgrounds name="background">
     <background>background\background</background>
     <background>background\background1</background>
@@ -13,9 +26,15 @@
     <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_enermy</object>
+    </objects>
+  </objects>
   <rooms name="rooms">
-    <room>rooms\room_main2</room>
     <room>rooms\room_main</room>
+    <room>rooms\room_main2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
