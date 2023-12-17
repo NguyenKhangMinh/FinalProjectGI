@@ -8,33 +8,55 @@
   <sprites name="sprites">
     <sprites name="player">
       <sprite>sprites\spr_idle</sprite>
-      <sprite>sprites\spr_attack</sprite>
       <sprite>sprites\spr_jump</sprite>
       <sprite>sprites\spr_run</sprite>
+      <sprite>sprites\spr_attack</sprite>
       <sprites name="enermy">
         <sprite>sprites\spr_enermy</sprite>
         <sprite>sprites\spr_enermy_attack</sprite>
         <sprite>sprites\spr_enermy_idle</sprite>
         <sprite>sprites\spr_enermy_walk</sprite>
+        <sprites name="boss">
+          <sprite>sprites\spr_boss</sprite>
+          <sprite>sprites\spr_boss_attack</sprite>
+          <sprite>sprites\spr_walk</sprite>
+          <sprite>sprites\spr_boss_death</sprite>
+        </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_ground</sprite>
+    <sprite>sprites\spr_dealDam</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
     <background>background\background1</background>
     <background>background\background2</background>
     <background>background\background3</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_getinput.gml</script>
+    <scripts name="player_states">
+      <script>scripts\scr_player_idle.gml</script>
+      <script>scripts\scr_player_attack.gml</script>
+      <script>scripts\scr_player_run.gml</script>
+      <script>scripts\scr_player_jump.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
+    <object>objects\obj_ground</object>
+    <object>objects\obj_dealDam</object>
     <objects name="Player">
       <object>objects\obj_player</object>
       <object>objects\obj_enermy</object>
+      <object>objects\obj_boss</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_main</room>
     <room>rooms\room_main2</room>
+    <room>rooms\room_main3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
