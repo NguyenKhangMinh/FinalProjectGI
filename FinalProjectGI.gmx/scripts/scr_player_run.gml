@@ -10,10 +10,11 @@ if (pressLeft + pressRight == 0) { //neu khong nhan phim nao thi dung yen
     state = playerStates.idle;
 }
 
-if (pressUp) { //neu dang nhan phim len, nhay len tren 10 don vi
+if (pressUp and jumpCounter < jumpMax) { //neu dang nhan phim len, nhay len tren 10 don vi
     moveX = 0;
     moveY = -10;
     state = playerStates.jump; //set trang thai nhay
+    jumpCounter++;
 }
 
 if (pressSpace) { //an phim danh

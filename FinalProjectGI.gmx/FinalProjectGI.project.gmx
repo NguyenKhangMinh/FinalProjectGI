@@ -26,6 +26,7 @@
     </sprites>
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\spr_dealDam</sprite>
+    <sprite>sprites\spr_door</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background</background>
@@ -34,7 +35,9 @@
     <background>background\background3</background>
     <background>background\background4</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_enermy</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_getinput.gml</script>
     <scripts name="player_states">
@@ -52,6 +55,7 @@
       <object>objects\obj_enermy</object>
       <object>objects\obj_boss</object>
     </objects>
+    <object>objects\obj_door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_main</room>

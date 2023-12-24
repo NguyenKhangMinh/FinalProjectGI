@@ -2,10 +2,6 @@ scr_getinput();
 
 sprite_index = spr_jump; //doi hinh anh thanh jump
 
-if(global.jumpCounter<2) {
-    moveY = -10;
-    global.jumpCounter+=1;
-}
 
 // Idle when collision ground
 if (place_meeting(x, y + moveY, obj_ground)) //neu sap va cham mat dat
@@ -41,4 +37,10 @@ if (pressLeft) {
     if (pressSpace) {
     state = playerStates.attack;
     }
+}
+
+if (pressUp and jumpCounter < jumpMax) {
+    moveY=-10;
+    state = playerStates.jump;
+    jumpCounter++;
 }

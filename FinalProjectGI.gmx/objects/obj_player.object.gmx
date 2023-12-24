@@ -40,7 +40,8 @@ moveX = 0;
 moveY = 0;
 counter = 0;
 hp = 3;
-global.jumpCounter = 0;
+jumpCounter = 0;
+jumpMax = 2;
 </string>
           </argument>
         </arguments>
@@ -78,7 +79,6 @@ switch (state) {
         scr_player_run();
         break;
     case (playerStates.jump):
-
         scr_player_jump();
         break;
 }
@@ -98,7 +98,7 @@ if (place_meeting(x, y + moveY, obj_ground))
         }
 
     moveY = 0; // khi va cham thi dung yen
-    
+    jumpCounter=0;
 }
 
 
