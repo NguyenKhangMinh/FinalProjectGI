@@ -84,9 +84,11 @@ switch (state) {
 }
 
 //PHYSICS
-if (moveY &lt; 10) //roi xuong voi toc do tang dan va toi da la 9
-{
-    moveY = min(moveY + grav, 9);
+
+// Apply gravity if not on a slope or ground
+if (!place_meeting(x, y + 1, obj_ground) &amp;&amp; !place_meeting(x, y + 1, obj_wall)) {
+    moveY += grav; // Apply gravity
+    if (moveY &gt; 9) moveY = 9; // Terminal velocity
 }
 
 //COLLISION CHECK
@@ -101,22 +103,40 @@ if (place_meeting(x, y + moveY, obj_ground))
     jumpCounter=0;
 }
 
-
-if (place_meeting(x + moveX, y - 2, obj_ground))
+if (place_meeting(x+moveX,y , obj_ground))
 {
-        while (not place_meeting(x + sign(moveX), y - 2, obj_ground))
+        while (not place_meeting(x+sign(moveX), y, obj_ground)) //khi khong sap va cham mat dat thi chuyen dong tiep
         {
-            x += sign(moveX);
+            x += sign(moveX);                  
         }
-                
-    moveX = 0;
+
+    moveX = 0; // khi va cham thi dung yen
+
 }
 
 
 
+// Slope collision
+var on_slope = false;
+if (place_meeting(x + moveX, y, obj_wall)) {
+    on_slope = true;
+    moveY = -moveX; // Move up the slope
+}
+
+// Apply vertical movement and correct for slope collision
+if (!on_slope || (on_slope &amp;&amp; !place_meeting(x, y + moveY, obj_wall))) {
+    y += moveY;
+} else if (on_slope) {
+    // Correct the vertical position if the player is embedded in the slope
+    while (place_meeting(x, y, obj_wall)) {
+        y -= 1; // Move the player up until they are no longer colliding with the slope
+    
+    }
+}
+
+
 // Apply Movement
 x += moveX;
-y += moveY;
 
 // Sprite controller
 if (pressLeft + pressRight != 0) { //neu nhu dang an 1 trong 2 phim

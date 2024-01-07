@@ -1,6 +1,7 @@
 scr_getinput();
 
 sprite_index = spr_idle;
+image_speed = 1/3;
 
 if (pressSpace) {
     state = playerStates.attack;
