@@ -4,9 +4,9 @@ sprite_index = spr_jump; //doi hinh anh thanh jump
 
 
 // Idle when collision ground
-if (place_meeting(x, y + moveY, obj_ground)) //neu sap va cham mat dat
+if (place_meeting(x, y + moveY, obj_ground))
 {
-    repeat(abs(moveY)) //lap lai tung pixel cho chinh xac
+    repeat(abs(moveY)) 
     {
         if (not place_meeting(x, y + sign(moveY), obj_ground))
         {

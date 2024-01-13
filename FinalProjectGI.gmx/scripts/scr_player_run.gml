@@ -3,7 +3,6 @@ scr_getinput();
 sprite_index = spr_run; //doi sprite run
 
 
-
 moveX = (pressRight - pressLeft) * spd; //di chuyen voi moveX don vi
 
 if (pressLeft + pressRight == 0) { //neu khong nhan phim nao thi dung yen

@@ -7,7 +7,6 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="enermy">
-      <sprite>sprites\spr_enermy</sprite>
       <sprite>sprites\spr_enermy_attack</sprite>
       <sprite>sprites\spr_enermy_idle</sprite>
       <sprite>sprites\spr_enermy_walk</sprite>
@@ -16,6 +15,7 @@
         <sprite>sprites\spr_boss_attack</sprite>
         <sprite>sprites\spr_walk</sprite>
         <sprite>sprites\spr_boss_death</sprite>
+        <sprite>sprites\spr_laser</sprite>
       </sprites>
     </sprites>
     <sprites name="player">
@@ -27,7 +27,8 @@
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\spr_dealDam</sprite>
     <sprite>sprites\spr_door</sprite>
-    <sprite>sprites\spr_door_open</sprite>
+    <sprite>sprites\spr_door_opening</sprite>
+    <sprite>sprites\spr_door_opened</sprite>
     <sprite>sprites\Spr_Slope_1</sprite>
     <sprite>sprites\Spr_Slope_2</sprite>
     <sprite>sprites\Spr_Slope_3</sprite>
@@ -53,9 +54,13 @@
   <objects name="objects">
     <object>objects\obj_ground</object>
     <object>objects\obj_dealDam</object>
+    <object>objects\obj_enemy_dealDam</object>
     <objects name="Player">
       <object>objects\obj_player</object>
-      <object>objects\obj_enermy</object>
+      <object>objects\obj_enemy1</object>
+      <object>objects\obj_enemy2</object>
+      <object>objects\obj_enemy3</object>
+      <object>objects\obj_enemy4</object>
       <object>objects\obj_boss</object>
     </objects>
     <object>objects\obj_door</object>
